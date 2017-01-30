@@ -14,6 +14,8 @@ import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SchedulePage } from '../pages/schedule/schedule';
 import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
 import { SupportPage } from '../pages/support/support';
+import { HomePage } from '../pages/home/home';
+
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
@@ -52,6 +54,7 @@ export class ConferenceApp {
   loggedOutPages: PageInterface[] = [
     { title: 'Login', component: LoginPage, icon: 'log-in' },
     { title: 'Support', component: SupportPage, icon: 'help' },
+    { title: 'HomePage', component: HomePage, icon: 'help' },
     { title: 'Signup', component: SignupPage, icon: 'person-add' }
   ];
   rootPage: any;

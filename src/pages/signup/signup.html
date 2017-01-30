@@ -7,7 +7,7 @@
 	</ion-navbar>
 </ion-header>
 
-<ion-content class="login-page">
+<ion-content class="login-page login_screen_content">
 
 	<div class="logo">
 		<img src="assets/img/appicon.svg" alt="Ionic Logo">
@@ -15,28 +15,38 @@
 
 	<form #signupForm="ngForm" novalidate>
 		<ion-list no-lines>
-			<ion-item>
-				<ion-label stacked color="primary">Username</ion-label>
-				<ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required>
+			<ion-item class="input_texbox">
+				<ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" placeholder=" Phone Number" required>
 				</ion-input>
 			</ion-item>
 			<p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
 				Username is required
 			</p>
 
-			<ion-item>
-				<ion-label stacked color="primary">Password</ion-label>
-				<ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
+			<ion-item class="input_texbox">
+				<ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" placeholder="Password" required>
 				</ion-input>
 			</ion-item>
 			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
 				Password is required
 			</p>
+
+			<ion-item class="input_texbox">
+				<ion-input [(ngModel)]="signup.code" name="code" type="text" #code="ngModel" placeholder="Code" required>
+				</ion-input>
+			</ion-item>
+			
 		</ion-list>
 
-		<div padding>
-			<button ion-button (click)="onSignup(signupForm)" type="submit" block>Create</button>
-		</div>
+        <ion-row responsive-sm>
+			<ion-col>
+			  <button class="login_btn" ion-button (click)="onSignup(signupForm)" type="submit" block>Create</button>
+			</ion-col>
+			<ion-col>
+				<button class="facebook_btn" ion-button (click)="onSignup()" color="light" block><ion-icon name="logo-facebook"></ion-icon>Sign Up with Facebook</button>
+			</ion-col>
+		</ion-row>
+		
 	</form>
 
 </ion-content>

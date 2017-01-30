@@ -1,10 +1,19 @@
-<ion-header no-border>
+<!-- <ion-header no-border>
   <ion-navbar>
     <ion-buttons end *ngIf="showSkip">
       <button ion-button (click)="startApp()" color="primary">Skip</button>
     </ion-buttons>
   </ion-navbar>
+</ion-header> -->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Name APP</ion-title>
+  </ion-navbar>
 </ion-header>
+
 
 <ion-content no-bounce>
   <ion-slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>

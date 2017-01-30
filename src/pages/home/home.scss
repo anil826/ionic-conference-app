@@ -1,16 +1,14 @@
+page-home {
+
+}
+
+
 .login_screen_content {
 background: #0e0e0e; 
 background: -moz-linear-gradient(top, #0e0e0e 0%, #7d7e7d 100%, #7d7e7d 100%); 
 background: -webkit-linear-gradient(top, #0e0e0e 0%,#7d7e7d 100%,#7d7e7d 100%); 
 background: linear-gradient(to bottom, #0e0e0e 0%,#7d7e7d 100%,#7d7e7d 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#7d7e7d',GradientType=0 ); 
-}
-
-.input_texbox {
-  border-radius: 22px;
-    width: 85%;
-    left: 8%;
-    margin-bottom:5%;
 }
 
 .login_btn {
@@ -20,9 +18,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', end
     background-color:rgb(119, 116, 0)
 }
 
-.facebook_btn{
-  background-color: #365899;
+.signup_btn{
+  border-radius: 25px;
     width: 60%;
-    left: 21%;
+    left: 20%;
+    background-color:rgb(154, 154, 154)
+}
+
+.home_logo{
+	margin-left:25%;
+	max-width: 50%;
+	border:0;
+}
+
+.have_account_lbl{
+	margin: auto;
+    margin-left: 25%;
     color: white;
+    font-size: smaller;
+}
+
+.footer_lbl{
+	    font-size: 10px;
+    color: white;
+    margin-left: 18%;
 }
