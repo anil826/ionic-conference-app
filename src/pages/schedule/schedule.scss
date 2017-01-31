@@ -35,13 +35,28 @@ background: linear-gradient(to bottom, #0e0e0e 0%,#7d7e7d 100%,#7d7e7d 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#7d7e7d',GradientType=0 ); 
 }
 .pin{
-	font-size: 100px;
-
+	 background: transparent;
+   color: white;
+  font-size:50px;
+}
+.rang_scroll{
+   background: transparent;
+   color: white;
+   border: none !important;
 }
 .next_btn {
    font-size: 30px;
   border-radius: 50px;
     width: 60%;
-    left: 20%;
+    left: 35%;
+    top: 80%;
+    position: absolute;
     background-color:rgb(119, 116, 0)
+}
+
+.rang_lable{
+  background: transparent;
+    color: wheat;
+    border: none !important;
+    left: 70%;
 }

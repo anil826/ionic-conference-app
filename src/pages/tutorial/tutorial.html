@@ -7,9 +7,9 @@
 </ion-header> -->
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
+    <!-- <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
-    </button>
+    </button> -->
     <ion-title>Name APP</ion-title>
   </ion-navbar>
 </ion-header>
@@ -18,36 +18,93 @@
 <ion-content no-bounce>
   <ion-slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
 
-    <ion-slide>
-      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image"/>
-      <h2 class="slide-title">
-        Welcome to <b>ICA</b>
-      </h2>
-      <p>
-        The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of proper code use.
-      </p>
+      <ion-slide>
+        <ion-content class="about_screen_content">
+      <ion-list>
+      <ion-item class="pin">
+         <ion-icon name="ios-pin-outline"><h4>Use my location ++</h4></ion-icon>
+      </ion-item>
+
+      <ion-item class="rang_scroll">
+        <ion-range [(ngModel)]="singleValue" color="danger" pin="true"></ion-range>
+      </ion-item>
+
+      <ion-item class="rang_lable">
+         <ion-label>{{singleValue}} Miles</ion-label>
+      </ion-item>
+
+     </ion-list>
+    <ion-col>
+      <button class="next_btn" type="submit">Next</button>
+    </ion-col>
+</ion-content>
     </ion-slide>
 
     <ion-slide>
-      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image"/>
-      <h2 class="slide-title" >What is Ionic?</h2>
-      <p><b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.</p>
+     
+
+ <ion-content class="about_screen_content">
+  <div class="about-header">
+        <ion-col>
+           <ion-item class="input_texbox">
+                <ion-input  name="number" type="text"  placeholder=" Write a number" spellcheck="false" autocapitalize="off"
+                  required>
+                </ion-input>
+            </ion-item>
+          <ion-item>
+            <ion-label>Select Type</ion-label>
+            <ion-select [(ngModel)]="gender">
+              <ion-option value="f" selected="true">Type 1</ion-option>
+              <ion-option value="m">Type 2</ion-option>
+            </ion-select>
+          </ion-item>
+          
+      </ion-col>
+      <ion-col>
+          <ion-item style="background: transparent;color: white;">
+            <ion-label>= 12,000</ion-label>
+          </ion-item>
+        <button class="next_btn" type="submit" block>Next</button>
+      </ion-col>
+      
+</div>
+</ion-content>
     </ion-slide>
 
     <ion-slide>
-      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image"/>
-      <h2 class="slide-title">What is Ionic Platform?</h2>
-      <p>The <b>Ionic Platform</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.</p>
+      <ion-content class="about_screen_content">
+      <h2 class="slide-title" style="color: white;">User Settings</h2>
+      <ion-col>
+           <ion-item>
+                <ion-label>App Language</ion-label>
+            <ion-select [(ngModel)]="gender">
+              <ion-option value="f" selected="true">English</ion-option>
+              <ion-option value="m">Spanish</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label>Unit</ion-label>
+            <ion-select [(ngModel)]="gender">
+              <ion-option value="f" selected="true">Kilometer</ion-option>
+              <ion-option value="m">Miles</ion-option>
+            </ion-select>
+          </ion-item>
+      </ion-col>
+
+      <ion-item class="input_texbox">
+        <ion-label>Name</ion-label>
+        <ion-input [(ngModel)]="login" name="username" type="text"  placeholder="  User Name" spellcheck="false" autocapitalize="off"
+          required>
+        </ion-input>
+      </ion-item>
+      <ion-col>
+      <button class="next_btn" type="submit">Finish</button>
+    </ion-col>
+
+      </ion-content>
+
     </ion-slide>
 
-    <ion-slide>
-      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>
-      <h2 class="slide-title">Ready to Play?</h2>
-      <button ion-button icon-right large clear (click)="startApp()">
-        Continue
-        <ion-icon name="arrow-forward"></ion-icon>
-      </button>
-    </ion-slide>
 
   </ion-slides>
 </ion-content>

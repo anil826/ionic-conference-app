@@ -4,15 +4,13 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     
-      <!-->Volume-up Glyph<-->
-       <span class="glyphicon glyphicon-volume-up"></span>    
-    
+      <!-->Volume-up Glyph<-->    
     <ion-title>Name app</ion-title>
     
     <ion-buttons end>
-      <button ion-button icon-only (click)="presentPopover($event)">
+      <!-- <button ion-button icon-only (click)="presentPopover($event)">
         <ion-icon name="more"></ion-icon>
-      </button>
+      </button> -->
     </ion-buttons>
   </ion-navbar>
 </ion-header>
@@ -27,6 +25,20 @@
 </ion-header-->
 
 <ion-content class="about_screen_content">
+  <ion-list>
+    <ion-item class="pin">
+       <ion-icon name="ios-pin-outline"><h4>Use my location ++</h4></ion-icon>
+    </ion-item>
+
+    <ion-item class="rang_scroll">
+      <ion-range [(ngModel)]="singleValue" color="danger" pin="true"></ion-range>
+    </ion-item>
+
+    <ion-item class="rang_lable">
+       <ion-label>{{singleValue}} Miles</ion-label>
+    </ion-item>
+
+  </ion-list>
   <!--ion-list #scheduleList [hidden]="shownSessions === 0">
 
     <ion-item-group *ngFor="let group of groups" [hidden]="group.hide">
@@ -78,16 +90,13 @@
   </ion-fab-->
 
 
-  <ion-icon name="pin" class = "pin"><h4>Use my location+</h4></ion-icon>
+  
 
       <ion-col>
-        <button class="next_btn" type="submit" block>Next</button>
+        <button class="next_btn" type="submit">Next</button>
       </ion-col>
 
       <ion-buttons>
-      <button ion-button icon-only >
-        <ion-icon name="more"></ion-icon>
-      </button>
     </ion-buttons>
   
 

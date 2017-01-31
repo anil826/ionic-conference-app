@@ -38,14 +38,27 @@ $colors: (
   vimeo:      #23b6ea,
   facebook:   #3b5998
 );
-
+$range-ios-bar-background-color:danger;
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
 
-
+.ion-navbar.toolbar {
+  background: #504f4e;
+  
+}
+.toolbar-title-ios {
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-align: center;
+    color: #f4f4f4 !important;
+    pointer-events: auto;
+}
+.header-ios .toolbar-ios:last-child .toolbar-background-ios{
+  background: #504f4e;
+}
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here

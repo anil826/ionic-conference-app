@@ -4,51 +4,31 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     
-      <!-->Volume-up Glyph<-->
-       <span class="glyphicon glyphicon-volume-up"></span>    
-    
+      <!-->Volume-up Glyph<-->    
     <ion-title>Name app</ion-title>
-    
-    <ion-buttons end>
-      <button ion-button icon-only (click)="presentPopover($event)">
-        <ion-icon name="more"></ion-icon>
-      </button>
-    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="about_screen_content">
   <div class="about-header">
-    
+    <ion-col>
    <ion-item class="input_texbox">
         <ion-input  name="number" type="text"  placeholder=" Write a number" spellcheck="false" autocapitalize="off"
           required>
-        </ion-input>
+    </ion-input>
 
     </ion-item>
-<form>
-    <div class="form-group">
-      
-      <select class="form-control">
-        select user
-        <option>user1</option>
-        <option>user2</option>
-        <option>user3</option>
-        <option>user4</option>
-      </select>
-      
-    </div>
-  </form>
-      
+  <ion-item>
+    <ion-label>Select Type</ion-label>
+    <ion-select [(ngModel)]="gender">
+      <ion-option value="f" selected="true">Type 1</ion-option>
+      <ion-option value="m">Type 2</ion-option>
+    </ion-select>
+  </ion-item>
+  </ion-col>
       <ion-col>
         <button class="next_btn" type="submit" block>Next</button>
       </ion-col>
-
-      <ion-buttons>
-      <button ion-button icon-only >
-        <ion-icon name="more"></ion-icon>
-      </button>
-    </ion-buttons>
       
 </div>
   
