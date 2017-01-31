@@ -1,36 +1,33 @@
 <ion-header>
-  <ion-navbar no-border-bottom>
+  <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-
-    <ion-segment [(ngModel)]="segment" (ionChange)="updateSchedule()">
-      <ion-segment-button value="all">
-        All
-      </ion-segment-button>
-      <ion-segment-button value="favorites">
-        Favorites
-      </ion-segment-button>
-    </ion-segment>
-
+    
+      <!-->Volume-up Glyph<-->
+       <span class="glyphicon glyphicon-volume-up"></span>    
+    
+    <ion-title>Name app</ion-title>
+    
     <ion-buttons end>
-      <button ion-button icon-only (click)="presentFilter()">
-        <ion-icon ios="ios-options-outline" md="md-options"></ion-icon>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
+</ion-header>
 
-  <ion-toolbar no-border-top>
+  <!--ion-toolbar no-border-top>
     <ion-searchbar color="primary"
                    [(ngModel)]="queryText"
                    (ionInput)="updateSchedule()"
                    placeholder="Search">
     </ion-searchbar>
   </ion-toolbar>
-</ion-header>
+</ion-header-->
 
-<ion-content>
-  <ion-list #scheduleList [hidden]="shownSessions === 0">
+<ion-content class="about_screen_content">
+  <!--ion-list #scheduleList [hidden]="shownSessions === 0">
 
     <ion-item-group *ngFor="let group of groups" [hidden]="group.hide">
 
@@ -64,9 +61,9 @@
 
     </ion-item-group>
 
-  </ion-list>
+  </ion-list-->
 
-  <ion-list-header [hidden]="shownSessions > 0">
+  <!--ion-list-header [hidden]="shownSessions > 0">
       No Sessions Found
   </ion-list-header>
 
@@ -78,7 +75,14 @@
       <button ion-fab color="twitter" (click)="openSocial('Twitter', fab)"><ion-icon name="logo-twitter"></ion-icon></button>
       <button ion-fab color="facebook" (click)="openSocial('Facebook', fab)"><ion-icon name="logo-facebook"></ion-icon></button>
     </ion-fab-list>
-  </ion-fab>
+  </ion-fab-->
+
+!--Basic: auto-select the icon based on the platform -->
+  <ion-icon name="pin"></ion-icon>
+
+  <!-- Advanced: explicity set the icon for each platform -->
+  <ion-icon ios="ios-pin" lg="md-pin"></ion-icon>
 
 
 </ion-content>
+

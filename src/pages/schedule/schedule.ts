@@ -145,3 +145,5 @@ export class SchedulePage {
     loading.present();
   }
 }
+
+
